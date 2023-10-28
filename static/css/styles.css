@@ -1,0 +1,90 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style the search container */
+.search-container {
+    display: flex;
+    background-image: url('your-image.jpg'); /* Replace 'your-image.jpg' with the path to your background image */
+    background-size: cover; /* Adjust background size as needed */
+    background-repeat: no-repeat;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 800px; /* Adjust the width as needed */
+    margin: 20px auto; /* Center the search box horizontally */
+}
+
+/* Style the search box input */
+.search-box {
+    flex: 1; /* Take up remaining space in the container */
+    border: none;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8); /* White background with some transparency */
+    border-radius: 5px;
+    outline: none;
+    transition: background-color 0.3s ease, width 0.3s ease; /* Add transition for background color and width */
+    animation: fadeIn 0.5s ease; /* Add fade-in animation */
+}
+
+/* Style the search button */
+.search-button {
+    background-color: #007bff; /* Blue color for the button */
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+    outline: none;
+    position: relative; /* Required for absolute positioning of the loading dots */
+}
+
+/* Add hover effect to the search button */
+.search-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Style the search box input when focused */
+.search-box:focus {
+    background-color: white; /* Change the background color on focus */
+    width: 100%; /* Expand the width when focused */
+}
+
+/* Define the fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Style the loading dots animation */
+@keyframes loadingDots {
+    0%, 20% {
+        content: '';
+    }
+    40%, 60% {
+        content: '.';
+    }
+    80%, 100% {
+        content: '..';
+    }
+}
+
+/* Apply the loading dots animation to the search button when clicked */
+.search-button.loading::after {
+    content: '.';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: loadingDots 1s infinite;
+
+}
+
+
