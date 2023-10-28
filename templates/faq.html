@@ -1,0 +1,172 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="theme-color" media="(prefers-color-scheme: light)" content="white" />
+	<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#222222" />
+	<!-- Google Fonts -->
+
+	<!-- CSS Styles  -->
+	<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&amp;family=Dela+Gothic+One&amp;display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="static/css/vendor/bootstrap.min.css" />
+	<link rel="stylesheet" href="static/css/vendor/animate.css" />
+	<link rel="stylesheet" href="static/css/vendor/owl.carousel.min.css" />
+	<link rel="stylesheet" href="static/css/vendor/owl.theme.default.min.css" />
+	<link rel="stylesheet" href="static/css/style.min5152.css?ver=1.0" />
+	<link rel="icon" href="static/img/favicon.png" />
+	<title>Check Phishing Domain | CodeCrafters</title>
+	<link rel="stylesheet" href="static/css/styles.css" />
+    </head>
+	<body class="theme-dark">
+	<header class="header">
+	<div class="container">
+		<nav class="header__navbar navbar navbar-expand-lg">
+			<a class="navbar-brand" href="index.html">
+				<img src="static/img/logo-dark.png" alt="" />
+			</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarContent">
+				<ul class="navbar-nav list-unstyled">
+                    <li class="nav-item">
+						<a class="nav-link" href="{{ url_for('index') }}">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{{ url_for('about') }}">About Us</a>
+					</li>
+                    <li class="nav-item">
+						<a class="nav-link" href="{{ url_for('team') }}">Team</a>
+					</li>
+                    <li class="nav-item">
+						<a class="nav-link" href="{{ url_for('roadmap') }}">Roadmap</a>
+					</li>
+                    <li class="nav-item">
+						<a class="nav-link" href="{{ url_for('faq') }}">Faq</a>
+					</li>
+                    <li class="nav-item">
+						<a class="nav-link" href="{{ url_for('checkurl') }}">Check Url</a>
+					</li>
+				</ul>
+	            </li>
+            </ul>
+        </div>
+		</nav>
+	</div>
+ </header>
+ <main class="main m-0 py-60">
+	<section class="section-faq">
+		<img class="section-faq__ornament" src="static/img/section-faq-ornament.svg" alt="" />
+		<div class="section-faq__container container">
+			<h2 class="section-faq__title nft-h2">Wait, I need to know <br />something…</h2>
+			<div class="section-faq__wrapper row align-items-end">
+				<ul class="section-faq__list list-unstyled col-sm-8 col-lg-9">
+					<li class="section-faq__item wow animate__animated animate__fadeInUp" data-wow-delay="0.1s">
+						<div class="section-faq__item-heading">
+							<h3 class="section-faq__item-title">What is the purpose of this application?</h3>
+							<span class="section-faq__item-icon">
+								<svg>
+									<use xlink:href="#faq-icon"></use>
+								</svg>
+							</span>
+						</div>
+						<div class="section-faq__item-content">
+							<p>This application is designed to detect domain phishing attempts. It helps users verify the legitimacy of website domains to protect against online fraud and phishing attacks.</p>
+						</div>
+					</li>
+					<li class="section-faq__item wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+						<div class="section-faq__item-heading">
+							<h3 class="section-faq__item-title">How does the application work?</h3>
+							<span class="section-faq__item-icon">
+								<svg>
+									<use xlink:href="#faq-icon"></use>
+								</svg>
+							</span>
+						</div>
+						<div class="section-faq__item-content">
+							<p>The application uses a machine learning model to analyze a domain's characteristics and compare them to known phishing patterns. It also leverages the Google API to validate the domain's authenticity.</p>
+						</div>
+					</li>
+					<li class="section-faq__item wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+						<div class="section-faq__item-heading">
+							<h3 class="section-faq__item-title">What kind of domains can the application detect?</h3>
+							<span class="section-faq__item-icon">
+								<svg>
+									<use xlink:href="#faq-icon"></use>
+								</svg>
+							</span>
+						</div>
+						<div class="section-faq__item-content">
+							<p>The application is capable of detecting potential phishing domains that mimic legitimate websites, including those used in email phishing attacks.</p>
+						</div>
+					</li>
+					<li class="section-faq__item wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+						<div class="section-faq__item-heading">
+							<h3 class="section-faq__item-title">What data sources are used for training the machine learning model?</h3>
+							<span class="section-faq__item-icon">
+								<svg>
+									<use xlink:href="#faq-icon"></use>
+								</svg>
+							</span>
+						</div>
+						<div class="section-faq__item-content">
+							<p>The machine learning model is trained on a combination of publicly available datasets, including examples of known phishing and legitimate domains.</p>
+						</div>
+					</li>
+					<li class="section-faq__item wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+						<div class="section-faq__item-heading">
+							<h3 class="section-faq__item-title">How accurate is the domain detection process?</h3>
+							<span class="section-faq__item-icon">
+								<svg>
+									<use xlink:href="#faq-icon"></use>
+								</svg>
+							</span>
+						</div>
+						<div class="section-faq__item-content">
+							<p>The accuracy of the detection process depends on the quality of the data and the effectiveness of the machine learning model. We continuously work to improve accuracy.</p>
+						</div>
+					</li>
+					<li class="section-faq__item wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+						<div class="section-faq__item-heading">
+							<h3 class="section-faq__item-title">Is the application free to use?</h3>
+							<span class="section-faq__item-icon">
+								<svg>
+									<use xlink:href="#faq-icon"></use>
+								</svg>
+							</span>
+						</div>
+						<div class="section-faq__item-content">
+							<p>Yes, our application is free for general users. However, we may offer premium features for businesses or organizations in the future.</p>
+						</div>
+					</li>
+					<li class="section-faq__item wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
+						<div class="section-faq__item-heading">
+							<h3 class="section-faq__item-title">Is the application accessible to everyone?</h3>
+							<span class="section-faq__item-icon">
+								<svg>
+									<use xlink:href="#faq-icon"></use>
+								</svg>
+							</span>
+						</div>
+						<div class="section-faq__item-content">
+							<p>Yes, the application is accessible to the general public and aims to help users, regardless of their technical expertise, to identify potential phishing domains.
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+</main>
+<!-- Javascript Files -->
+<script src="static/js/vendor/jquery-3.6.0.min.js"></script>
+<script src="static/js/vendor/bootstrap.min.js"></script>
+<script src="static/js/vendor/wow.min.js"></script>
+<script src="static/js/vendor/owl.carousel.min.js"></script>
+<script src="static/js/script5152.js?ver=1.0"></script>
+<script>
+new WOW().init();
+</script>
+</body>
+</html>

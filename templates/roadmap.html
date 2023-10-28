@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="theme-color" media="(prefers-color-scheme: light)" content="white" />
+	<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#222222" />
+	<!-- Google Fonts -->
+
+	<!-- CSS Styles  -->
+	<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&amp;family=Dela+Gothic+One&amp;display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="static/css/vendor/bootstrap.min.css" />
+	<link rel="stylesheet" href="static/static/css/vendor/animate.css" />
+	<link rel="stylesheet" href="static/css/vendor/owl.carousel.min.css" />
+	<link rel="stylesheet" href="static/css/vendor/owl.theme.default.min.css" />
+	<link rel="stylesheet" href="static/css/style.min5152.css?ver=1.0" />
+	<link rel="icon" href="img/favicon_nft_dark.svg" />
+    <link rel="stylesheet" href="static/css/styles.css" />
+	<title>Home | Code Crafters </title>
+</head>
+
+	<body class="theme-dark">
+		<header class="header">
+            <div class="container">
+                <nav class="header__navbar navbar navbar-expand-lg">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="static/img/logo-dark.png" alt="" />
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarContent">
+                        <ul class="navbar-nav list-unstyled">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('index') }}">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('about') }}">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('team') }}">Team</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('roadmap') }}">Roadmap</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('faq') }}">Faq</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('checkurl') }}">Check Url</a>
+                            </li>
+                        </ul>
+                        </li>
+                    </ul>
+                </div>
+                </nav>
+            </div>
+        </header>
+		<br></br>
+		<section id="roadmap" class="section-roadmap">
+			<div class="section-roadmap__image"></div>
+			<div class="section-roadmap__container container">
+				<div class="section-roadmap__wrapper">
+					<h2 class="section-roadmap__title nft-h2 wow animate__animated animate__slideInDown">Roadmap</h2>
+					<p class="section-roadmap__text wow animate__animated animate__slideInRight">Check out our ambitious plans: as we go, we’ll tick the points until we’re there.</p>
+					<ul class="section-roadmap__list list-unstyled">
+						<li class="section-roadmap__item wow animate__animated animate__fadeInUp" data-wow-delay="0.1s">
+							<div class="section-roadmap__item-heading">
+								<span class="section-roadmap__item-number">0%</span>
+								<span class="section-roadmap__item-text">Research and Data Preparation:</span>
+							</div>
+							<div class="section-roadmap__item-content">
+								<p>Gather relevant data for your phishing detection model, including examples of both phishing and legitimate domains.</p>
+								<p>Clean and prepare the data, ensuring it's in a usable format for machine learning.</p>
+							</div>
+						</li>
+						<li class="section-roadmap__item wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+							<div class="section-roadmap__item-heading">
+								<span class="section-roadmap__item-number">20%</span>
+								<span class="section-roadmap__item-text">Machine Learning Model:</span>
+							</div>
+							<div class="section-roadmap__item-content">
+								<p>Develop a machine learning model for domain phishing detection. This involves creating a program that can identify whether a domain is legitimate or phishing.</p>
+								<p>Train the model using the prepared data and fine-tune it for accuracy.</p>
+							</div>
+						</li>
+						<li class="section-roadmap__item wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+							<div class="section-roadmap__item-heading">
+								<span class="section-roadmap__item-number">40%</span>
+								<span class="section-roadmap__item-text">Application Development:</span>
+							</div>
+							<div class="section-roadmap__item-content">
+								<p>Design the user interface (UI) for your application, creating a layout and appearance that is user-friendly.</p>
+								<p>Develop the front-end (what users see) and back-end (the logic and processing) of your application.</p>
+								<p>Integrate the Google API to allow for domain validation, ensuring domains are legitimate.</p>
+							</div>
+						</li>
+						<li class="section-roadmap__item wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
+							<div class="section-roadmap__item-heading">
+								<span class="section-roadmap__item-number">70%</span>
+								<span class="section-roadmap__item-text">Testing and Refinement:</span>
+							</div>
+							<div class="section-roadmap__item-content">
+								<p>Test your application with real users to gather feedback on usability and identify any issues.</p>
+								<p>Address any bugs or vulnerabilities in your application, ensuring it's secure and performs well.</p>
+							</div>
+						</li>
+						<li class="section-roadmap__item wow animate__animated animate__fadeInUp" data-wow-delay="0.5s">
+							<div class="section-roadmap__item-heading">
+								<span class="section-roadmap__item-number">100%</span>
+								<span class="section-roadmap__item-text">Presentation and Launch:</span>
+							</div>
+							<div class="section-roadmap__item-content">
+								<p>Prepare a compelling pitch and presentation that explains your application's purpose and features.</p>
+							    <p>Participate in the hackathon, presenting your project to judges.</p>
+								<p>After the hackathon, launch your application for public use if it's well-received and ready for real-world use.</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+		<!-- Javascript Files -->
+<script src="static/js/vendor/jquery-3.6.0.min.js"></script>
+<script src="static/js/vendor/bootstrap.min.js"></script>
+<script src="static/js/vendor/wow.min.js"></script>
+<script src="static/js/vendor/owl.carousel.min.js"></script>
+<script src="static/js/script5152.js?ver=1.0"></script>
+<script>
+	new WOW().init();
+</script>
+</body>
+</html>

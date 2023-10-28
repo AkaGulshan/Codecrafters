@@ -1,0 +1,45 @@
+<!-- checkurl.html -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" media="(prefers-color-scheme: light)" content="white" />
+        <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#222222" />
+        <!-- Google Fonts -->
+    
+        <!-- CSS Styles  -->
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&amp;family=Dela+Gothic+One&amp;display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="static/css/vendor/bootstrap.min.css" />
+        <link rel="stylesheet" href="static/css/vendor/animate.css" />
+        <link rel="stylesheet" href="static/css/vendor/owl.carousel.min.css" />
+        <link rel="stylesheet" href="static/css/vendor/owl.theme.default.min.css" />
+        <link rel="stylesheet" href="static/css/style.min5152.css?ver=1.0" />
+        <link rel="icon" href="static/img/favicon.png" />
+        <title>Check Phishing Domain | CodeCrafters</title>
+        <link rel="stylesheet" href="static/css/styles.css" />
+        </head>
+</head>
+<body class="theme-dark">
+    <main class="main m-0 p-0">
+        <div class="container">
+            <div class="content">
+                <h3 class="nft-h3">Check URL</h3>
+                <form method="POST" action="/" enctype="multipart/form-data">
+                    <label for="Enter URL"></label>
+                    <div class="search-container">
+                        <input type="text" class="search-box" name="url" id="url" placeholder="Enter Url Here..." required>
+                        <button type="submit" class="search-button">Check URL</button>
+                    </div>
+                </form>
+
+                {% if result.url %}
+                    <!-- Include your code here, like Phishing Status, SSL Analysis, Whois Data, etc. -->
+                {% endif %}
+
+            </div>
+        </div>
+    </main>
+</body>
+</html>

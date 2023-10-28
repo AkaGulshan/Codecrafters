@@ -1,0 +1,137 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="theme-color" media="(prefers-color-scheme: light)" content="white" />
+	<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#222222" />
+	<!-- Google Fonts -->
+
+	<!-- CSS Styles  -->
+	<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&amp;family=Dela+Gothic+One&amp;display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="static/css/vendor/bootstrap.min.css" />
+	<link rel="stylesheet" href="static/css/vendor/animate.css" />
+	<link rel="stylesheet" href="static/css/vendor/owl.carousel.min.css" />
+	<link rel="stylesheet" href="static/css/vendor/owl.theme.default.min.css" />
+	<link rel="stylesheet" href="static/css/style.min5152.css?ver=1.0" />
+	<link rel="icon" href="static/static/img/favicon.png" />
+	<title>Check Phishing Domain | CodeCrafters</title>
+	<link rel="stylesheet" href="static/css/styles.css" />
+    </head>
+	<body class="theme-dark">
+	<header class="header">
+	<div class="container">
+		<nav class="header__navbar navbar navbar-expand-lg">
+			<a class="navbar-brand" href="index.html">
+				<img src="static/img/logo-dark.png" alt="" />
+			</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarContent">
+				<ul class="navbar-nav list-unstyled">
+                    <li class="nav-item">
+						<a class="nav-link" href="{{ url_for('index') }}">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{{ url_for('about') }}">About Us</a>
+					</li>
+                    <li class="nav-item">
+						<a class="nav-link" href="{{ url_for('team') }}">Team</a>
+					</li>
+                    <li class="nav-item">
+						<a class="nav-link" href="{{ url_for('roadmap') }}">Roadmap</a>
+					</li>
+                    <li class="nav-item">
+						<a class="nav-link" href="{{ url_for('faq') }}">Faq</a>
+					</li>
+                    <li class="nav-item">
+						<a class="nav-link" href="{{ url_for('checkurl') }}">Check Url</a>
+					</li>
+				</ul>
+	            </li>
+            </ul>
+        </div>
+		</nav>
+	</div>
+ </header>
+	  <main class="main m-0 p-0">
+		 <div class="container">
+		     <div class="content">
+			 <h3 class="nft-h3">Check URL</h3>
+			 <form method="POST" action="/" enctype="multipart/form-data">
+			<label for="Enter URL"></label>
+            <div class="search-container">
+        <input type="text" class="search-box" name="url" id="url" placeholder="Enter Url Here..." required>
+       <button type="submit" class="search-button">Check URL</button>
+    </div>
+</form>
+                      
+{% if result.url %}
+<h2>Phishing Status</h2>
+                {% if result.phishing_status == "Safe" %}
+                <p style="color: green;">This site is safe.</p>
+                {% elif result.phishing_status == "Phishing" %}
+                <p style="color: red;">This site may be unsafe (phishing).</p>
+                {% else %}
+                <p style="color: orange;">Phishing status could not be determined.</p>
+                {% endif %}
+                <table class="table table-bordered">
+                    <tr>
+                        <th>Analysis Aspect</th>
+                        <th>Result</th>
+                    </tr>
+                    {% if result.ssl is defined %}
+                    <tr>
+                        <td>SSL Analysis</td>
+                        <td>{{ result.ssl }}</td>
+                    </tr>
+                    {% endif %}
+                    {% if result.website_age is defined %}
+                    <tr>
+                        <td>Website Age</td>
+                        <td>{{ result.website_age }}</td>
+                    </tr>
+                    {% endif %}
+                    {% if result.authority is defined %}
+                    <tr>
+                        <td>Authority</td>
+                        <td>{{ result.authority }}</td>
+                    </tr>
+                    {% endif %}
+                    {% if result.indexed is defined %}
+                    <tr>
+                        <td>Indexed on Search Engines</td>
+                        <td>{{ result.indexed }}</td>
+                    </tr>
+                    {% endif %}
+                </table>
+
+                {% if result.traffic_graph %}
+                    <img src="{{ result.traffic_graph }}" alt="Traffic Graph">
+                {% endif %}
+
+                
+                {% endif %}
+
+                <table class="table table-bordered">
+                    <tr>
+                        <th>Property</th>
+                        <th>Value</th>
+                    </tr>
+                    {% if result.whois_data %}
+                        {% for key, value in result.whois_data.items() %}
+                            <tr>
+                                <td>{{ key }}</td>
+                                <td>{{ value }}</td>
+                            </tr>
+                        {% endfor %}
+                    {% else %}
+                        <tr>
+                            <td colspan="2">No Whois data available for this URL.</td>
+                        </tr>
+                    {% endif %}
+                </table>
+                <a href="{{ result.website_html }}" target="_blank">View HTML Code</a>
+</body>
+</html>
